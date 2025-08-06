@@ -19,7 +19,15 @@ export default function Layout({ children, theme, setTheme, activeTab, setActive
             <button
               className={`nav-link${activeTab==='compare' ? ' active':''}`}
               onClick={() => setActiveTab('compare')}>Compare</button>
-            {/* Add more tabs as needed */}
+            <button
+              className={`nav-link${activeTab==='trends' ? ' active':''}`}
+              onClick={() => setActiveTab('trends')}>Trends</button>
+            <button
+              className={`nav-link${activeTab==='seats' ? ' active':''}`}
+              onClick={() => setActiveTab('seats')}>Seats</button>
+            <button
+              className={`nav-link${activeTab==='summary' ? ' active':''}`}
+              onClick={() => setActiveTab('summary')}>Summary</button>
           </nav>
           <ThemeToggle theme={theme} setTheme={setTheme} />
           <AboutModal />
